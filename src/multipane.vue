@@ -35,7 +35,7 @@
   height: 10px;
   margin-top: -10px;
   top: 5px;
-  cursor: row-resize;
+  cursor: ns-resize;
 }
 
 .layout-v > .multipane-resizer {
@@ -43,6 +43,6 @@
   height: 100%;
   margin-left: -10px;
   left: 5px;
-  cursor: col-resize;
+  cursor: ew-resize;
 }
 </style>

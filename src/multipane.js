@@ -27,7 +27,7 @@ export default {
     },
     cursor() {
       return this.isResizing
-        ? this.layout == LAYOUT_VERTICAL ? 'col-resize' : 'row-resize'
+        ? this.layout == LAYOUT_VERTICAL ? 'ew-resize' : 'ns-resize'
         : '';
     },
     userSelect() {
