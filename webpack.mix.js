@@ -41,8 +41,8 @@ if (argv.env.entry=='demo') {
 
   // Demo files
   mix
-    .js('demo/src/main.js', 'demo/main.js')
-    .copy('demo/src/index.html', 'demo/index.html');
+    .js('./demo/src/main.js', './demo/main.js')
+    .copy('./demo/src/index.html', './demo/index.html');
 
   if (mix.inDevelopment()) {
 

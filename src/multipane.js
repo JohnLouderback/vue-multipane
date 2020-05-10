@@ -80,13 +80,28 @@ export default {
         // Trigger paneResizeStart event
         self.$emit('paneResizeStart', pane, resizer, size);
 
-        const onMouseMove = function({ pageX, pageY }) {
+        let needsUpdate = true;
+        var pageX = 0;
+        var pageY = 0;
+
+        const update = () => {
           size =
             layout == LAYOUT_VERTICAL
               ? resize(initialPaneWidth, pageX - initialPageX)
               : resize(initialPaneHeight, pageY - initialPageY);
 
           self.$emit('paneResize', pane, resizer, size);
+          needsUpdate = true;
+        };
+
+        var onMouseMove = function(ref) {
+          pageX = ref.pageX;
+          pageY = ref.pageY;
+
+          if (needsUpdate) {
+            needsUpdate = false;
+            requestAnimationFrame(update);
+          }
         };
 
         const onMouseUp = function() {
