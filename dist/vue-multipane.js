@@ -89,7 +89,7 @@
           var size = resize();
 
           // Trigger paneResizeStart event
-          self.$emit('paneResizeStart', pane, resizer, size);
+          self.$emit('pane-resize-start', pane, resizer, size);
 
           var needsUpdate = true;
           var pageX = 0;
@@ -101,7 +101,7 @@
                 ? resize(initialPaneWidth, pageX - initialPageX)
                 : resize(initialPaneHeight, pageY - initialPageY);
 
-            self.$emit('paneResize', pane, resizer, size);
+            self.$emit('pane-resize', pane, resizer, size);
             needsUpdate = true;
           };
 
@@ -128,7 +128,7 @@
             removeEventListener('mousemove', onMouseMove);
             removeEventListener('mouseup', onMouseUp);
 
-            self.$emit('paneResizeStop', pane, resizer, size);
+            self.$emit('pane-resize-stop', pane, resizer, size);
           };
 
           addEventListener('mousemove', onMouseMove);

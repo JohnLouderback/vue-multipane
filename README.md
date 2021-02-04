@@ -112,9 +112,9 @@ You can also add resize handle only specific panes by just adding `<multipane-re
 
 |    Event           |    Description   |   Returns  |
 | ------------------ | ---------------- | :--------: |
-| paneresizestart    | When user clicks on the resize handle to start resizing a pane. | pane, container, size |
-| paneresize         | When user is resizing a pane. | pane, container, size |
-| paneresizestop     | When user release the resize handle to stop resizing a pane. | pane, container, size |
+| pane-resize-start    | When user clicks on the resize handle to start resizing a pane. | pane, container, size |
+| pane-resize         | When user is resizing a pane. | pane, container, size |
+| pane-resize-stop     | When user release the resize handle to stop resizing a pane. | pane, container, size |
 
 ## License
 **[vue-multipane](https://github.com/yansern/vue-multipane)** by [Yan Sern](https://twitter.com/yansernio) licensed under [MIT](LICENSE).
